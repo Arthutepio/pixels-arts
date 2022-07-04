@@ -13,3 +13,18 @@
   display: inline-block;
   border-radius: 10px;
 }
+
+#pixel-board {
+  /* border: 1px solid; */
+  width: 600px;
+  margin: 0;
+  padding: 40px;
+}
+
+.pixel {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline-block;
+  background-color: white;
+}
