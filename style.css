@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 
 #color-palette {
@@ -12,13 +13,14 @@
   border: 1px solid black;
   display: inline-block;
   border-radius: 10px;
+  
 }
 
 #pixel-board {
   /* border: 1px solid; */
   width: 250px;
   margin: 0;
-  padding: 40px;
+  padding: 40px;  
 }
 
 .pixel {
