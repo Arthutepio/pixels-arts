@@ -40,3 +40,32 @@ function criaTag() {
           coresDaPaleta[i].addEventListener("click", addRemoveSelec);
         }
       } clickCorPaleta();
+
+     //==================================================//
+     let apliCorPixel = document.querySelectorAll('.pixel');
+ 
+     function addcolorSelec(event2){
+        const corSelect = document.querySelector('.selected');
+        const pixel = event2.target;
+        if(corSelect === colorBlack){
+            pixel.style.backgroundColor = 'black';
+        }
+        if(corSelect === colorYellow){
+            pixel.style.backgroundColor = 'yellow';
+        }
+        if(corSelect === colorBlue){
+            pixel.style.backgroundColor = 'blue';
+        }
+        if(corSelect === colorGreen){
+            pixel.style.backgroundColor = 'green';
+        }
+     }
+     
+     
+     function aplicaCores(){
+     for (let i = 0; i < apliCorPixel.length; i += 1) {
+        apliCorPixel[i].addEventListener("click", addcolorSelec);
+     }
+    } aplicaCores();
+
+    
