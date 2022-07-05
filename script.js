@@ -69,3 +69,15 @@ function criaTag() {
     } aplicaCores();
 
     
+    
+    
+    
+    
+    
+    let button = document.getElementById('clear-board');
+    button.addEventListener('click', clear);
+    function clear(){
+        pixel = document.querySelectorAll('.pixel');
+        for(let i = 0; i < pixel.length; i += 1)
+        pixel[i].style.backgroundColor = 'white';
+    }
