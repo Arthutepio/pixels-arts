@@ -7,26 +7,26 @@ colorBlue.style.backgroundColor = 'blue';
 const colorGreen = document.getElementById('color-4');
 colorGreen.style.backgroundColor = 'green';
 
-function criaTag() {
-    let count = [];
-    for (let i = 1; i <= 25; i +=1){
-        count.push(i)
-    }
-    let quadroPixels = document.createElement('div');
-    quadroPixels.id = 'pixel-board';
-    document.body.appendChild(quadroPixels);
-    for(let i in count){
-        let pixel = document.createElement('div');
+
+const pixelBoard = document.createElement('div');
+pixelBoard.id = 'pixel-board';
+document.body.appendChild(pixelBoard);
+let pixel = [];    
+    for(let i = 1; i <= 25; i +=1){
+        pixel = document.createElement('div');
         pixel.classList.add('pixel');
-        quadroPixels.appendChild(pixel);
+        pixelBoard.appendChild(pixel);
     }
-    }
-    criaTag();
-    
-    window.onload = function start() {
+  
+//================================================================// 
+
+
+window.onload = function start() {
         colorBlack.classList.add('selected')
     }
 
+    
+    
     let coresDaPaleta = document.getElementsByClassName("color");
     
     function addRemoveSelec(event) {
@@ -81,3 +81,47 @@ function criaTag() {
         for(let i = 0; i < pixel.length; i += 1)
         pixel[i].style.backgroundColor = 'white';
     }
+
+    //=============================================================//
+    
+const btnVqv = document.getElementById('generate-board')
+
+btnVqv.addEventListener('click', function () {
+  pixelBoard.innerHTML = null; // apaga pixels anteriores
+  let boardSize = document.getElementById('board-size').value;
+  pixelBoard.style.width = (boardSize * 42) + 'px';
+  boardSize *= boardSize
+  // Insere a quantidade de pixels do input (ao quadrado)
+  verificaInput(boardSize);
+  for (let index = 0; index < boardSize; index += 1) {   
+        pixel = document.createElement('div');
+        pixel.classList.add('pixel');
+        pixelBoard.appendChild(pixel);
+    
+    }
+})
+
+
+function verificaInput(input) {
+    if (!input) alert('Board inválido!');
+    else if (input < 5) boardSize = 5;
+    else if (input > 50) boardSize = 50;
+  }
+
+// Bonus - Cores randomicas
+// function randomColor() {
+//   let randColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+//   if (randColor !== '#000000') {
+//     color[1].style.backgroundColor = randColor
+//     randColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+//   }
+//   if (randColor !== '#000000' && randColor !== color[1].style.backgroundColor) {
+//     color[2].style.backgroundColor = randColor
+//     randColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+//   }
+//   if (randColor !== '#000000' && randColor !== color[1].style.backgroundColor
+//       && randColor !== color[2].style.backgroundColor) {
+//     color[3].style.backgroundColor = randColor
+//   }
+// }
+// window.onload = randomColor();

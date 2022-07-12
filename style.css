@@ -12,9 +12,10 @@
 }
 
 #pixel-board {
-  width: 250px;
-  margin: 0;
+  width: 210px; 
+  height: auto;
   padding: 40px;
+  
 }
 
 .pixel {
@@ -25,8 +26,12 @@
   background-color: white;
 }
 
-#clear-board {
+.btn {
   width: 100px;
   height: 30px;
   font-size: 20px;
+}
+
+.cor{
+  background-color:green;
 }
