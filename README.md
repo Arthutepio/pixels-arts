@@ -25,7 +25,7 @@ npm install
 * [JavaScript](https://github.com/topics/javascript) - Linguagem de script;
 * [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) - Linguagem de Marcação de HiperTexto;
 * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)- Estilização em cascata;
-* [BOOTSTRAP]([https://developer.mozilla.org/pt-BR/docs/Web/CSS](https://getbootstrap.com/))- Framework CSS para ser utilizado no front-end de aplicações web;
+* [BOOTSTRAP](https://getbootstrap.com/)- Framework CSS para ser utilizado no front-end de aplicações web;
 
 
 ## Tasks:
